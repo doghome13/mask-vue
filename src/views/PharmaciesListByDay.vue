@@ -21,7 +21,7 @@
       <el-table :data="tableData" style="width: 100%">
         <el-table-column prop="name" label="藥局名稱" width="180">
         </el-table-column>
-        <el-table-column label="今天營業時間" v-slot="scope">
+        <el-table-column :label="tableTitle" v-slot="scope">
           <ul>
             <li v-for="hour in scope.row.today" :key="hour.pharmacy_id">
               <span>{{ hour.start_at }}</span> -
@@ -47,6 +47,7 @@ export default {
       tableData: [],
       pickDatetime: "",
       datetimeFormat: "YYYY/MM/DD HH:mm:ss",
+      tableTitle: "今天營業時間",
     };
   },
   mounted: function () {
@@ -69,6 +70,7 @@ export default {
 
       this.tableData = [];
       this.isLoading = true;
+      this.tableTitle = pikcDatet + ' 營業時間';
 
       axios
         .post("/api/pharmacy/list/period", data)

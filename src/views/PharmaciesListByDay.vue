@@ -2,7 +2,7 @@
   <ul class="header">
     <li>
       <el-row :gutter="10">
-        <el-col :span="6">
+        <el-col :offset="16" :span="6">
           <el-date-picker
             v-model="pickDatetime"
             type="datetime"
@@ -12,7 +12,7 @@
           >
           </el-date-picker>
         </el-col>
-        <el-col :span="6" :offset="12">
+        <el-col :span="2">
           <el-button type="primary" @click="search">查詢</el-button>
         </el-col>
       </el-row>
@@ -70,7 +70,7 @@ export default {
 
       this.tableData = [];
       this.isLoading = true;
-      this.tableTitle = pikcDatet + ' 營業時間';
+      this.tableTitle = pikcDatet + " 營業時間";
 
       axios
         .post("/api/pharmacy/list/period", data)

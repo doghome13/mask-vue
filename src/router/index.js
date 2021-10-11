@@ -19,6 +19,11 @@ const routes = [
     path: '/pharmacy/list/period',
     name: 'PharmaciesListByDay',
     component: () => import('@/views/PharmaciesListByDay.vue')
+  },
+  {
+    path: '/mask/list',
+    name: 'MasksListByPharmacy',
+    component: () => import('@/views/MasksListByPharmacy.vue')
   }
 ]
 

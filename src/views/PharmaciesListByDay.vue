@@ -15,12 +15,17 @@
           </el-date-picker>
         </li>
         <li>
-          <el-button type="primary" @click="search" :disabled="pickDatetime == ''">查詢</el-button>
+          <el-button
+            type="primary"
+            @click="search"
+            :disabled="pickDatetime == '' || isLoading"
+            >查詢</el-button
+          >
         </li>
       </ul>
     </li>
     <li>
-      <el-table :data="tableData" style="width: 100%">
+      <el-table v-loading="isLoading" :data="tableData" style="width: 100%">
         <el-table-column prop="name" label="藥局名稱" width="180">
         </el-table-column>
         <el-table-column :label="tableTitle" v-slot="scope">

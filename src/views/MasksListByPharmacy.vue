@@ -17,9 +17,10 @@
         </li>
         <li>
           <el-button
+            v-loading="isLoading"
             type="primary"
             @click="search"
-            :disabled="pickPharmacyId == ''"
+            :disabled="pickPharmacyId == '' || isLoading"
             >查詢</el-button
           >
         </li>

@@ -6,12 +6,12 @@
       >
         <li style="margin-right: 10px">
           <label>最低價格</label>
-          <br/>
+          <br />
           <span>{{ priceRange[0] }}</span>
         </li>
         <li style="margin-right: 10px">
           <label>最高價格</label>
-          <br/>
+          <br />
           <span>{{ priceRange[1] }}</span>
         </li>
         <li style="margin-right: 10px; width: 50%">
@@ -27,12 +27,12 @@
           </el-slider>
         </li>
         <li>
-          <el-button type="primary" @click="search">查詢</el-button>
+          <el-button type="primary" @click="search" :disabled="isLoading">查詢</el-button>
         </li>
       </ul>
     </li>
     <li>
-      <el-table :data="tableData" style="width: 100%">
+      <el-table v-loading="isLoading" :data="tableData" style="width: 100%">
         <el-table-column prop="name" label="藥局名稱" width="180">
         </el-table-column>
         <el-table-column label="口罩" v-slot="scope">

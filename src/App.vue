@@ -3,7 +3,8 @@
     <!-- <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> | -->
     <router-link to="/pharmacy/list/period">營業中的藥局</router-link> |
-    <router-link to="/mask/list">各藥局販售的口罩</router-link>
+    <router-link to="/mask/list">各藥局販售的口罩</router-link> |
+    <router-link to="/pharmacy/list/price">依據價格搜尋藥局</router-link>
   </div>
   <router-view/>
 </template>

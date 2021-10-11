@@ -15,7 +15,7 @@
           </el-date-picker>
         </li>
         <li>
-          <el-button type="primary" @click="search">查詢</el-button>
+          <el-button type="primary" @click="search" :disabled="pickDatetime == ''">查詢</el-button>
         </li>
       </ul>
     </li>

@@ -24,6 +24,11 @@ const routes = [
     path: '/mask/list',
     name: 'MasksListByPharmacy',
     component: () => import('@/views/MasksListByPharmacy.vue')
+  },
+  {
+    path: '/pharmacy/list/price',
+    name: 'PharmaciesListByPrice',
+    component: () => import('@/views/PharmaciesListByPrice.vue')
   }
 ]
 

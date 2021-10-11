@@ -1,8 +1,10 @@
 <template>
-  <ul class="header">
-    <li>
-      <el-row :gutter="10">
-        <el-col :offset="16" :span="6">
+  <ul>
+    <li style="margin-bottom: 10px">
+      <ul
+        style="display: flex; list-style-type: none; justify-content: flex-end"
+      >
+        <li style="margin-right: 10px">
           <el-date-picker
             v-model="pickDatetime"
             type="datetime"
@@ -11,11 +13,11 @@
             placeholder="選擇查看日期"
           >
           </el-date-picker>
-        </el-col>
-        <el-col :span="2">
+        </li>
+        <li>
           <el-button type="primary" @click="search">查詢</el-button>
-        </el-col>
-      </el-row>
+        </li>
+      </ul>
     </li>
     <li>
       <el-table :data="tableData" style="width: 100%">
@@ -100,11 +102,9 @@ export default {
 </script>
 
 <style scoped>
-ul.header {
+ul {
   list-style-type: none;
-}
-
-.header li:not(:last-of-type) {
-  margin-bottom: 10px;
+  margin: 0;
+  padding: 0;
 }
 </style>

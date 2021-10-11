@@ -81,7 +81,7 @@ export default {
       this.isLoading = true;
 
       axios
-        .post("/api/pharmacy//list/masks", data)
+        .post("/api/pharmacy/list/masks", data)
         .then((response) => {
           const data = response.data.data;
 

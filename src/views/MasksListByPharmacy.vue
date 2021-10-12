@@ -17,7 +17,6 @@
         </li>
         <li>
           <el-button
-            v-loading="isLoading"
             type="primary"
             @click="search"
             :disabled="pickPharmacyId == '' || isLoading"
@@ -27,7 +26,7 @@
       </ul>
     </li>
     <li>
-      <el-table :data="tableData" style="width: 100%">
+      <el-table v-loading="isLoading" :data="tableData" style="width: 100%">
         <el-table-column prop="name" label="口罩名稱" width="180" sortable>
         </el-table-column>
         <el-table-column prop="color" label="顏色" min-width="50">

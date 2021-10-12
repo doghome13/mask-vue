@@ -41,6 +41,11 @@ export default {
           path: "/pharmacy/list/price",
           trans: "依據價格搜尋藥局",
         },
+        {
+          key: 4,
+          path: "/transaction/list/user",
+          trans: "顧客消費排名",
+        },
       ],
       router: useRouter(),
     };

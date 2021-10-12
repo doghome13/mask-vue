@@ -69,6 +69,7 @@ export default {
         })
         .catch(function (error) {
           console.log(error);
+          this.$message.error("錯誤");
         })
         .finally(() => {
           this.isLoading = false;

@@ -44,7 +44,13 @@ const routes = [{
         name: 'TransactionsByDay',
         component: () =>
             import ('@/views/TransactionsByDay.vue')
-    }
+    },
+    {
+        path: '/search',
+        name: 'SearchMaskOrPharmacy',
+        component: () =>
+            import ('@/views/SearchMaskOrPharmacy.vue')
+    },
 ]
 
 const router = createRouter({

@@ -51,6 +51,11 @@ export default {
           path: "/transaction/list",
           trans: "期間內的總銷售",
         },
+        {
+          key: 6,
+          path: "/search",
+          trans: "搜尋藥局 / 口罩",
+        },
       ],
       router: useRouter(),
     };

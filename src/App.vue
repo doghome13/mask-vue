@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="nav" class="flex pull-left">
     <!-- <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> | -->
     <el-select placeholder="請選擇" v-model="selectView" @change="changeView">
@@ -59,6 +59,7 @@ export default {
 </script>
 
 <style>
+@import './assets/main.css';
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -68,7 +69,7 @@ export default {
 }
 
 #nav {
-  padding: 30px;
+  padding: 20px;
 }
 
 #nav a {

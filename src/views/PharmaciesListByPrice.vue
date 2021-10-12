@@ -1,20 +1,18 @@
 <template>
-  <ul>
+  <ul class="default">
     <li style="margin-bottom: 10px">
-      <ul
-        style="display: flex; list-style-type: none; justify-content: flex-end"
-      >
-        <li style="margin-right: 10px">
+      <ul class="default flex pull-right">
+        <!-- <li style="margin-right: 10px; font-size: small">
           <label>最低價格</label>
           <br />
           <span>{{ priceRange[0] }}</span>
         </li>
-        <li style="margin-right: 10px">
+        <li style="margin-right: 10px; font-size: small">
           <label>最高價格</label>
           <br />
           <span>{{ priceRange[1] }}</span>
-        </li>
-        <li style="margin-right: 10px; width: 50%">
+        </li> -->
+        <li style="margin-right: 20px; min-width: 200px">
           <label>價格範圍</label>
           <el-slider
             v-model="priceRange"
@@ -27,12 +25,26 @@
           </el-slider>
         </li>
         <li>
-          <el-button type="primary" @click="search" :disabled="isLoading">查詢</el-button>
+          <el-button type="primary" @click="search" :disabled="isLoading"
+            >查詢</el-button
+          >
         </li>
       </ul>
     </li>
-    <li>
-      <el-table v-loading="isLoading" :data="tableData" style="width: 100%">
+    <li class="flex pull-right table">
+      <div style="margin-right: 10px; font-size: small">
+        <label>最低價格</label>
+        <br />
+        <span>{{ priceRange[0] }}</span>
+      </div>
+      <div style="font-size: small">
+        <label>最高價格</label>
+        <br />
+        <span>{{ priceRange[1] }}</span>
+      </div>
+    </li>
+    <li class="table">
+      <el-table v-loading="isLoading" :data="tableData">
         <el-table-column prop="name" label="藥局名稱" width="180">
         </el-table-column>
         <el-table-column label="口罩" v-slot="scope">
@@ -94,11 +106,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-</style>

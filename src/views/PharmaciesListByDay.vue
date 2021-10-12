@@ -1,9 +1,7 @@
 <template>
-  <ul>
+  <ul class="default">
     <li style="margin-bottom: 10px">
-      <ul
-        style="display: flex; list-style-type: none; justify-content: flex-end"
-      >
+      <ul class="default flex pull-right">
         <li style="margin-right: 10px">
           <el-date-picker
             v-model="pickDatetime"
@@ -24,8 +22,8 @@
         </li>
       </ul>
     </li>
-    <li>
-      <el-table v-loading="isLoading" :data="tableData" style="width: 100%">
+    <li class="table">
+      <el-table v-loading="isLoading" :data="tableData">
         <el-table-column prop="name" label="藥局名稱" width="180">
         </el-table-column>
         <el-table-column :label="tableTitle" v-slot="scope">
@@ -105,11 +103,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-</style>

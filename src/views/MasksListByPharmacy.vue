@@ -1,9 +1,7 @@
 <template>
-  <ul>
+  <ul class="default">
     <li style="margin-bottom: 10px">
-      <ul
-        style="display: flex; list-style-type: none; justify-content: flex-end"
-      >
+      <ul class="default flex pull-right">
         <li style="margin-right: 10px">
           <el-select v-model="pickPharmacyId" placeholder="請選擇">
             <el-option
@@ -25,8 +23,8 @@
         </li>
       </ul>
     </li>
-    <li>
-      <el-table v-loading="isLoading" :data="tableData" style="width: 100%">
+    <li class="table">
+      <el-table v-loading="isLoading" :data="tableData">
         <el-table-column prop="name" label="口罩名稱" width="180" sortable>
         </el-table-column>
         <el-table-column prop="color" label="顏色" min-width="50">
@@ -101,11 +99,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-</style>

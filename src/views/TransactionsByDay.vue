@@ -47,7 +47,7 @@ export default {
       isLoading: false,
       tableData: [],
       dateRange: "",
-      datetimeFormat: "YYYY/MM/DD",
+      datetimeFormat: "YYYY-MM-DD",
     };
   },
   mounted: function () {

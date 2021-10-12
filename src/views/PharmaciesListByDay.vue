@@ -51,7 +51,7 @@ export default {
       isLoading: false,
       tableData: [],
       pickDatetime: "",
-      datetimeFormat: "YYYY/MM/DD HH:mm:ss",
+      datetimeFormat: "YYYY-MM-DD HH:mm:ss",
       tableTitle: "今天營業時間",
     };
   },

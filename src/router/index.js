@@ -38,6 +38,12 @@ const routes = [{
         name: 'UserTransactionsByDay',
         component: () =>
             import ('@/views/UserTransactionsByDay.vue')
+    },
+    {
+        path: '/transaction/list',
+        name: 'TransactionsByDay',
+        component: () =>
+            import ('@/views/TransactionsByDay.vue')
     }
 ]
 

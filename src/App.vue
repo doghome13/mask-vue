@@ -46,6 +46,11 @@ export default {
           path: "/transaction/list/user",
           trans: "顧客消費排名",
         },
+        {
+          key: 5,
+          path: "/transaction/list",
+          trans: "期間內的總銷售",
+        },
       ],
       router: useRouter(),
     };

@@ -1,0 +1,21 @@
+ul.default {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+li.table {
+    padding: 0 20px;
+}
+
+.pull-right {
+    justify-content: flex-end;
+}
+
+.pull-left {
+    justify-content: flex-start;
+}

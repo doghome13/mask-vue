@@ -1,4 +1,4 @@
-import { ElButton, ElCol, ElDatePicker, ElInput, ElLoading, ElOption, ElRow, ElSelect, ElSlider, ElTable, ElTableColumn } from 'element-plus'
+import { ElButton, ElCol, ElDatePicker, ElInput, ElLoading, ElMessage, ElOption, ElRow, ElSelect, ElSlider, ElTable, ElTableColumn } from 'element-plus'
 // import lang from 'element-plus/lib/locale/lang/'
 // import locale from 'element-plus/lib/locale'
 import 'element-plus/lib/theme-chalk/index.css';
@@ -16,4 +16,5 @@ export default (app) => {
     app.use(ElSlider)
     app.use(ElLoading)
     app.use(ElInput)
+    app.use(ElMessage)
 }

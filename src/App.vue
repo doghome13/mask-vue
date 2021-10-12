@@ -56,6 +56,11 @@ export default {
           path: "/search",
           trans: "搜尋藥局 / 口罩",
         },
+        {
+          key: 7,
+          path: "/user/purchase",
+          trans: "鍵入顧客消費紀錄",
+        },
       ],
       router: useRouter(),
     };

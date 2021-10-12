@@ -51,6 +51,12 @@ const routes = [{
         component: () =>
             import ('@/views/SearchMaskOrPharmacy.vue')
     },
+    {
+        path: '/user/purchase',
+        name: 'UserPurchase',
+        component: () =>
+            import ('@/views/UserPurchase.vue')
+    },
 ]
 
 const router = createRouter({

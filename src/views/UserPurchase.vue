@@ -42,7 +42,7 @@
         </el-table-column>
         <el-table-column prop="price" label="價格" min-width="50" sortable>
         </el-table-column>
-        <el-table-column label="操作" min-width="50" v-slot="scope">
+        <el-table-column label="選擇" min-width="50" v-slot="scope">
           <el-button
             :type="scope.row.id == product.id ? 'success' : 'default'"
             icon="el-icon-check"

@@ -59,7 +59,7 @@ export default {
         {
           key: 7,
           path: "/user/purchase",
-          trans: "鍵入顧客消費紀錄",
+          trans: "鍵入顧客的消費紀錄",
         },
       ],
       router: useRouter(),

@@ -1,6 +1,6 @@
 <template>
   <ul class="default">
-    <li style="margin-bottom: 10px">
+    <li style="margin-bottom: 10px" class="table">
       <ul class="default flex pull-right" style="flex-wrap: wrap">
         <li style="margin-bottom: 10px">
           <el-date-picker
@@ -11,6 +11,7 @@
             end-placeholder="结束日期"
             :format="datetimeFormat"
             :value-format="datetimeFormat"
+            style="width: fit-content"
           >
           </el-date-picker>
         </li>

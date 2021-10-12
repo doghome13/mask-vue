@@ -1,6 +1,6 @@
 <template>
   <ul class="default">
-    <li style="margin-bottom: 10px">
+    <li style="margin-bottom: 10px" class="table">
       <ul class="default flex pull-right">
         <li style="margin-right: 10px">
           <el-date-picker

@@ -1,6 +1,6 @@
 <template>
   <ul class="default">
-    <li style="margin-bottom: 10px">
+    <li style="margin-bottom: 10px" class="table">
       <ul class="default flex pull-right" style="flex-wrap: wrap">
         <li style="margin-bottom: 10px">
           <el-date-picker
@@ -11,6 +11,7 @@
             end-placeholder="结束日期"
             :format="datetimeFormat"
             :value-format="datetimeFormat"
+            style="width: fit-content"
           >
           </el-date-picker>
         </li>
@@ -35,61 +36,61 @@
 </template>
 
 <script>
-    import moment from "moment";
-    import axios from "axios";
+import moment from "moment";
+import axios from "axios";
 
-    export default {
-        name: "TransactionsByDay",
-        mixins: [moment],
-        data: function() {
-            return {
-                isLoading: false,
-                tableData: [],
-                dateRange: "",
-                datetimeFormat: "YYYY/MM/DD",
-            };
-        },
-        mounted: function() {
-            this.isLoading = false;
-            this.tableData = [];
-            this.dateRange = [
-                moment().format(this.datetimeFormat),
-                moment().format(this.datetimeFormat),
-            ];
-        },
-        methods: {
-            search: function() {
-                if (this.isLoading) {
-                    return;
-                }
-
-                const data = {
-                    startAt: this.dateRange[0],
-                    endAt: this.dateRange[1],
-                };
-
-                this.tableData = [];
-                this.isLoading = true;
-
-                axios
-                    .post("/api/user/list/transactions", data)
-                    .then((response) => {
-                        const data = response.data.data;
-
-                        if (data.length == 0) {
-                            return;
-                        }
-
-                        this.tableData = data;
-                    })
-                    .catch(function(error) {
-                        console.log(error);
-                        this.$message.error("錯誤");
-                    })
-                    .finally(() => {
-                        this.isLoading = false;
-                    });
-            },
-        },
+export default {
+  name: "TransactionsByDay",
+  mixins: [moment],
+  data: function () {
+    return {
+      isLoading: false,
+      tableData: [],
+      dateRange: "",
+      datetimeFormat: "YYYY/MM/DD",
     };
+  },
+  mounted: function () {
+    this.isLoading = false;
+    this.tableData = [];
+    this.dateRange = [
+      moment().format(this.datetimeFormat),
+      moment().format(this.datetimeFormat),
+    ];
+  },
+  methods: {
+    search: function () {
+      if (this.isLoading) {
+        return;
+      }
+
+      const data = {
+        startAt: this.dateRange[0],
+        endAt: this.dateRange[1],
+      };
+
+      this.tableData = [];
+      this.isLoading = true;
+
+      axios
+        .post("/api/user/list/transactions", data)
+        .then((response) => {
+          const data = response.data.data;
+
+          if (data.length == 0) {
+            return;
+          }
+
+          this.tableData = data;
+        })
+        .catch(function (error) {
+          console.log(error);
+          this.$message.error("錯誤");
+        })
+        .finally(() => {
+          this.isLoading = false;
+        });
+    },
+  },
+};
 </script>
